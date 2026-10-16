@@ -8,7 +8,7 @@ export const ui = {
   ko: {
     name: '서동현',
     role: 'AI 엔지니어',
-    nav: { home: '홈', about: '소개', projects: '프로젝트', posts: '글' },
+    nav: { home: '홈', about: '소개', projects: '프로젝트', posts: '리포트' },
     heroKicker: 'AI Engineer · Agents · RAG · LLM in production',
     heroTitle: ['모델을 고르는 이유와', '검증하는 방법을 기록합니다'],
     heroDesc:
@@ -16,15 +16,15 @@ export const ui = {
     ctaProjects: '프로젝트 보기',
     ctaBlog: '티스토리 블로그',
     featured: '대표 프로젝트',
-    recent: '정리한 글',
+    recent: '기술 리포트',
     allProjects: '전체 프로젝트',
-    allPosts: '전체 글',
-    readOn: '자세한 기록',
+    allPosts: '전체 리포트',
+    readOn: '개발 기록',
     code: '코드',
     result: '결과',
     stack: '사용 기술',
     blogNote: '대회 회고와 트렌드 리뷰, 개발 과정 기록은 티스토리 블로그에 더 자주 올립니다.',
-    postsIntro: '대표 프로젝트를 정리한 글입니다. 같은 글이 영어로도 있습니다.',
+    postsIntro: '프로젝트별 기술 리포트입니다. 문제 정의, 데이터, 파이프라인, 실험 결과를 코드 기준으로 정리했고, 모든 글이 영어로도 있습니다.',
     projectsIntro: 'RAG·에이전트, AI 서비스, ML 대회, 실무 프로젝트를 정리했습니다.',
     translated: '이 글의 영어판',
     originalOn: '개발 과정 기록 (티스토리)',
@@ -36,7 +36,7 @@ export const ui = {
   en: {
     name: 'Donghyun Seo',
     role: 'AI Engineer',
-    nav: { home: 'Home', about: 'About', projects: 'Projects', posts: 'Writing' },
+    nav: { home: 'Home', about: 'About', projects: 'Projects', posts: 'Reports' },
     heroKicker: 'AI Engineer · Agents · RAG · LLM in production',
     heroTitle: ['Notes on why a model was chosen', 'and how it was validated'],
     heroDesc:
@@ -44,15 +44,15 @@ export const ui = {
     ctaProjects: 'View projects',
     ctaBlog: 'Korean blog',
     featured: 'Featured projects',
-    recent: 'Writing',
+    recent: 'Technical reports',
     allProjects: 'All projects',
-    allPosts: 'All writing',
-    readOn: 'Full write-up (KO)',
+    allPosts: 'All reports',
+    readOn: 'Build log (KO)',
     code: 'Code',
     result: 'Result',
     stack: 'Stack',
     blogNote: 'Competition retrospectives, trend reviews and build logs are posted more often on my Korean blog.',
-    postsIntro: 'Write-ups of my main projects. Each one also exists in Korean.',
+    postsIntro: 'Technical reports for each project: problem, data, pipeline and experiments, written from the code. Every report also exists in Korean.',
     projectsIntro: 'RAG and agents, AI services, ML competitions and work projects.',
     translated: 'Korean version',
     originalOn: 'Build log on my Korean blog',
@@ -80,6 +80,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 'kftc',
+    postKey: 'kftc-rag',
     group: 'rag',
     featured: true,
     period: '2026.04 – 05',
@@ -95,10 +96,10 @@ export const projects: Project[] = [
     stack: ['BM25', 'BGE-m3-ko', 'RRF', 'Reranker', 'EXAONE 3.5', 'LoRA', 'Contextual Chunking'],
     repo: `${GITHUB}/KFTC`,
     posts: [t(1), t(2), t(3)],
-    postKey: 'kftc-rag',
   },
   {
     id: 'clinical',
+    postKey: 'clinical-agent',
     group: 'rag',
     featured: true,
     period: '2026.07 – 08',
@@ -116,6 +117,7 @@ export const projects: Project[] = [
   },
   {
     id: 'lawkeeper',
+    postKey: 'lawkeeper',
     group: 'rag',
     period: '',
     title: { ko: 'LawKeeper 법률 상담 RAG 챗봇', en: 'LawKeeper legal-advice RAG chatbot' },
@@ -133,6 +135,7 @@ export const projects: Project[] = [
   },
   {
     id: 'diary',
+    postKey: 'maeum-diary',
     group: 'service',
     featured: true,
     period: '2026.03 – 07',
@@ -150,6 +153,7 @@ export const projects: Project[] = [
   },
   {
     id: 'session-flow',
+    postKey: 'session-flow',
     group: 'service',
     featured: true,
     period: '2026.10',
@@ -165,10 +169,10 @@ export const projects: Project[] = [
     stack: ['Claude Code hooks', 'VS Code API', 'Node.js'],
     repo: `${GITHUB}/session-flow`,
     posts: [t(26)],
-    postKey: 'session-flow',
   },
   {
     id: 'etri',
+    postKey: 'etri-sleep',
     group: 'comp',
     featured: true,
     period: '2026.06',
@@ -187,6 +191,7 @@ export const projects: Project[] = [
   },
   {
     id: 'wind',
+    postKey: 'baram-wind',
     group: 'comp',
     period: '2026.07',
     title: { ko: 'BARAM 2026 풍력발전량 예측', en: 'BARAM 2026 wind power forecasting' },
@@ -203,6 +208,7 @@ export const projects: Project[] = [
   },
   {
     id: 'car',
+    postKey: 'car-classification',
     group: 'comp',
     period: '2025.06',
     title: { ko: '396종 차량 이미지 분류', en: '396-class car image classification' },
@@ -217,6 +223,7 @@ export const projects: Project[] = [
   },
   {
     id: 'elec',
+    postKey: 'power-forecasting',
     group: 'comp',
     period: '2025.08',
     title: { ko: '건물 100개 전력사용량 예측', en: 'Power demand forecasting for 100 buildings' },
@@ -231,6 +238,7 @@ export const projects: Project[] = [
   },
   {
     id: 'kwater',
+    postKey: 'kwater-drought',
     group: 'comp',
     period: '2024',
     title: { ko: 'K-water 가뭄 단계 예측', en: 'K-water drought stage prediction' },
@@ -245,6 +253,7 @@ export const projects: Project[] = [
   },
   {
     id: 'sejong',
+    postKey: 'sejong-siting',
     group: 'comp',
     period: '2024',
     title: { ko: '세종시 전기자전거 거치대 입지', en: 'E-bike dock siting for Sejong City' },
@@ -259,6 +268,7 @@ export const projects: Project[] = [
   },
   {
     id: 'work-rag',
+    postKey: 'product-rag-chatbot',
     group: 'work',
     period: '',
     title: { ko: '제품 문의 RAG 챗봇', en: 'Product inquiry RAG chatbot' },
@@ -275,6 +285,7 @@ export const projects: Project[] = [
   },
   {
     id: 'cost',
+    postKey: 'cost-simulator',
     group: 'work',
     period: '2026.01 – 02',
     title: { ko: '원가율 예측 시뮬레이터', en: 'Cost-ratio simulator' },

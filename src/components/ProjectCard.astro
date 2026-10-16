@@ -12,7 +12,7 @@ const base = lang === 'ko' ? '' : '/en';
   <div class="result"><b>{t.result}</b>{p.result[lang]}</div>
   <div class="tags">{p.stack.map((s) => <span class="tag">{s}</span>)}</div>
   <div class="links">
-    {p.postKey && <a href={`${base}/posts/${p.postKey}/`}>{lang === 'ko' ? '정리 글' : 'Write-up'}</a>}
+    {p.postKey && <a href={`${base}/posts/${p.postKey}/`}>{lang === 'ko' ? '기술 리포트' : 'Technical report'}</a>}
     {p.posts[0] && <a href={p.posts[0]} target="_blank" rel="noopener">{t.readOn} ↗</a>}
     {p.repo && <a href={p.repo} target="_blank" rel="noopener">{t.code} ↗</a>}
   </div>
