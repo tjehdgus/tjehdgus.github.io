@@ -3,7 +3,7 @@ import { ui, type Lang, type Project } from '../data/site';
 interface Props { p: Project; lang: Lang }
 const { p, lang } = Astro.props;
 const t = ui[lang];
-const base = lang === 'ko' ? '' : '/en';
+const base = lang === 'ko' ? '/ko' : '';
 ---
 <article class="card">
   <div class="card-top"><span>{t.groups[p.group]}</span>{p.period && <span>{p.period}</span>}</div>

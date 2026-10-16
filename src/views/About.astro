@@ -4,14 +4,14 @@ import { ui, GITHUB, TISTORY, type Lang } from '../data/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang];
-const base = lang === 'ko' ? '' : '/en';
+const base = lang === 'ko' ? '/ko' : '';
 const stack = {
   'LLM · RAG': ['LangChain', 'LangGraph', 'ChromaDB', 'FAISS', 'pgvector', 'BGE-m3', 'Reranker', 'LoRA'],
   'ML / DL': ['XGBoost', 'LightGBM', 'CatBoost', 'PyTorch', 'ConvNeXt V2', 'BiLSTM / BiGRU'],
   'Service': ['FastAPI', 'React', 'Supabase', 'Azure', 'Cloud Run', 'Claude Code'],
 };
 ---
-<Base lang={lang} section="about" title={t.nav.about} alt={lang === 'ko' ? '/en/about/' : '/about/'}>
+<Base lang={lang} section="about" title={t.nav.about} alt={lang === 'ko' ? '/about/' : '/ko/about/'}>
   <div class="wrap">
     <header class="page-head"><h1>{t.nav.about}</h1></header>
     <div class="about-grid">

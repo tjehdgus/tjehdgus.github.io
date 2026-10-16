@@ -11,7 +11,7 @@ interface Props {
 }
 const { lang, title, description, section = 'home', alt } = Astro.props;
 const t = ui[lang];
-const base = lang === 'ko' ? '' : '/en';
+const base = lang === 'ko' ? '/ko' : '';
 const siteTitle = lang === 'ko' ? '서동현 · AI 엔지니어' : 'Donghyun Seo · AI Engineer';
 const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 const desc = description ?? t.heroDesc;

@@ -2,7 +2,7 @@
 
 서동현의 한·영 포트폴리오 & 대표 프로젝트 글. Astro로 만들고 GitHub Actions로 GitHub Pages에 배포한다.
 
-- 한국어: `/` · English: `/en/`
+- English: `/` (기본) · 한국어: `/ko/` · 옛 `/en/*` 주소는 `/`로 리다이렉트
 - 상세한 개발 기록과 회고: https://mynews76154.tistory.com
 
 ## 구조
@@ -13,7 +13,7 @@ src/
   content/posts/en/*.md   영어판 (같은 key)
   data/site.ts            UI 문구, 프로젝트 목록 (ko/en)
   views/                  페이지 공통 화면
-  pages/, pages/en/       언어별 라우트
+  pages/, pages/ko/       언어별 라우트 (pages/en/은 리다이렉트용)
 ```
 
 ## 글 추가 규칙

@@ -1,13 +1,9 @@
 ---
-import Post from '../../../views/Post.astro';
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
-  const all = await getCollection('posts', (p) => !p.data.draft);
-  return all.filter((p) => p.data.lang === 'en').map((post) => ({
-    params: { key: post.data.key },
-    props: { post, hasOther: all.some((o) => o.data.key === post.data.key && o.data.lang !== 'en') },
-  }));
+  const all = await getCollection('posts', (p) => p.data.lang === 'en' && !p.data.draft);
+  return all.map((p) => ({ params: { key: p.data.key } }));
 }
-const { post, hasOther } = Astro.props;
+const { key } = Astro.params;
+return Astro.redirect(`/posts/${key}/`, 301);
 ---
-<Post post={post} hasOther={hasOther} />

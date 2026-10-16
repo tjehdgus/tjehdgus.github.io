@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import type { Lang } from '../data/site';
 interface Props { posts: CollectionEntry<'posts'>[]; lang: Lang }
 const { posts, lang } = Astro.props;
-const base = lang === 'ko' ? '' : '/en';
+const base = lang === 'ko' ? '/ko' : '';
 const fmt = (d: Date) => d.toISOString().slice(0, 10).replaceAll('-', '.');
 ---
 <div class="post-list">

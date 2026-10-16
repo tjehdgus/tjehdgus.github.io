@@ -7,7 +7,7 @@ const { lang } = Astro.props;
 const t = ui[lang];
 const order = ['rag', 'service', 'comp', 'work'] as const;
 ---
-<Base lang={lang} section="projects" title={t.nav.projects} alt={lang === 'ko' ? '/en/projects/' : '/projects/'}>
+<Base lang={lang} section="projects" title={t.nav.projects} alt={lang === 'ko' ? '/projects/' : '/ko/projects/'}>
   <div class="wrap">
     <header class="page-head"><h1>{t.nav.projects}</h1><p>{t.projectsIntro}</p></header>
     {order.map((g) => (

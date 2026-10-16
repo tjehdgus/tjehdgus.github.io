@@ -3,9 +3,9 @@ import Post from '../../views/Post.astro';
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
   const all = await getCollection('posts', (p) => !p.data.draft);
-  return all.filter((p) => p.data.lang === 'ko').map((post) => ({
+  return all.filter((p) => p.data.lang === 'en').map((post) => ({
     params: { key: post.data.key },
-    props: { post, hasOther: all.some((o) => o.data.key === post.data.key && o.data.lang !== 'ko') },
+    props: { post, hasOther: all.some((o) => o.data.key === post.data.key && o.data.lang !== 'en') },
   }));
 }
 const { post, hasOther } = Astro.props;

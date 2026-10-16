@@ -8,7 +8,7 @@ const { lang } = Astro.props;
 const t = ui[lang];
 const posts = await postsFor(lang);
 ---
-<Base lang={lang} section="posts" title={t.nav.posts} alt={lang === 'ko' ? '/en/posts/' : '/posts/'}>
+<Base lang={lang} section="posts" title={t.nav.posts} alt={lang === 'ko' ? '/posts/' : '/ko/posts/'}>
   <div class="wrap narrow">
     <header class="page-head"><h1>{t.nav.posts}</h1><p>{t.postsIntro}</p></header>
     <PostList posts={posts} lang={lang} />

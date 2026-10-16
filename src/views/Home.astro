@@ -7,11 +7,11 @@ import { postsFor } from '../data/posts';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang];
-const base = lang === 'ko' ? '' : '/en';
+const base = lang === 'ko' ? '/ko' : '';
 const featured = projects.filter((p) => p.featured);
 const posts = (await postsFor(lang)).slice(0, 5);
 ---
-<Base lang={lang} section="home" alt={lang === 'ko' ? '/en/' : '/'}>
+<Base lang={lang} section="home" alt={lang === 'ko' ? '/' : '/ko/'}>
   <section class="hero">
     <div class="wrap">
       <span class="kicker">{t.heroKicker}</span>
@@ -20,6 +20,7 @@ const posts = (await postsFor(lang)).slice(0, 5);
       <div class="cta">
         <a class="btn primary" href={`${base}/projects/`}>{t.ctaProjects}</a>
         <a class="btn" href={TISTORY} target="_blank" rel="noopener">{t.ctaBlog} ↗</a>
+        {lang === 'en' && <a class="btn" href="/ko/" hreflang="ko" lang="ko">한국어로 보기</a>}
       </div>
     </div>
   </section>
