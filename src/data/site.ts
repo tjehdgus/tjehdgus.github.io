@@ -273,12 +273,12 @@ export const projects: Project[] = [
     period: '',
     title: { ko: '제품 문의 RAG 챗봇', en: 'Product inquiry RAG chatbot' },
     summary: {
-      ko: '제조 기업의 제품 카탈로그와 회사 정보를 근거로 고객 문의에 답하고, 사람이 처리할 요청은 상담 신청으로 넘기는 챗봇. PII 마스킹, 멀티턴, 임베딩 비교 실험을 설계했다.',
-      en: 'A chatbot for a manufacturer that answers customer questions from product catalogues and company information, and hands off requests that need a human. Designed PII masking, multi-turn handling and embedding comparison experiments.',
+      ko: '사내 문서를 근거로 고객 제품 문의에 답하고, 사람이 처리할 요청은 상담 신청으로 넘기는 RAG 챗봇.',
+      en: 'A RAG chatbot that answers customer product questions from internal documents and hands off requests that need a human.',
     },
     result: {
-      ko: '문의 1차 응대 시간 평균 15분 → 10초 이내',
-      en: 'First-response time cut from ~15 minutes to under 10 seconds',
+      ko: 'ChromaDB · bge-m3 · Presidio PII 마스킹 · WebSocket 스트리밍',
+      en: 'ChromaDB · bge-m3 · Presidio PII masking · WebSocket streaming',
     },
     stack: ['bge-m3', 'ChromaDB', 'LangChain', 'FastAPI', 'Azure OpenAI'],
     posts: [t(13)],
@@ -290,12 +290,12 @@ export const projects: Project[] = [
     period: '2026.01 – 02',
     title: { ko: '원가율 예측 시뮬레이터', en: 'Cost-ratio simulator' },
     summary: {
-      ko: '영업 담당자가 견적 전에 적자 여부를 확인하는 웹 도구. 단가를 바꿔 보는 시뮬레이터 용도에 맞춰 원가율 대신 단위원가를 예측하도록 문제를 다시 정의했다.',
-      en: 'A web tool that lets sales check whether a quote would lose money before sending it. Reframed the target from cost ratio to unit cost so the model behaves sensibly when users vary the price.',
+      ko: '영업 담당자가 견적 전에 원가율을 확인하는 웹 시뮬레이터.',
+      en: 'A web simulator that lets sales check the cost ratio before sending a quote.',
     },
     result: {
-      ko: '단가 변경에 일관되게 반응하는 시뮬레이터로 배포',
-      en: 'Shipped a simulator that responds consistently to price changes',
+      ko: 'RandomForest 회귀 · FastAPI · Azure Container Apps',
+      en: 'RandomForest regression · FastAPI · Azure Container Apps',
     },
     stack: ['RandomForest', 'FastAPI', 'Azure'],
     posts: [t(6)],
