@@ -1,7 +1,7 @@
 ---
 title: "건물 100개 시간별 전력 예측: 도메인 피처와 건물별 GBDT 모델 선택 앙상블"
 description: "데이콘 2025 전력사용량 예측 AI 경진대회에서 CDH·THI·건물별 휴무일 피처와 패턴 매칭 스플라인 보간을 만들고, 건물마다 XGBoost·LightGBM·CatBoost 중 검증 SMAPE가 가장 낮은 모델을 골라 Public LB SMAPE 5.22를 얻었다."
-date: 2026-10-16
+date: 2026-03-17
 lang: ko
 key: power-forecasting
 tags: [Time Series, Energy Forecasting, Feature Engineering, XGBoost, LightGBM, CatBoost, Dacon]

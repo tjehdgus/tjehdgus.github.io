@@ -1,7 +1,7 @@
 ---
 title: "Maeum Diary: Golden-Set-Driven Emotion Classification Prompts and a Conversational Agent with pgvector and Knowledge-Graph Memory"
 description: "A technical report on the emotion analysis, RAG long-term-memory chat, and crisis detection layer of the AI diary app Maeum Diary. On a 394-item golden set, emotion classification accuracy rose from 53.8% to 71.6% and Macro F1 from 0.483 to 0.700."
-date: 2026-10-16
+date: 2026-08-04
 lang: en
 key: maeum-diary
 tags: [LLM, RAG, pgvector, LangGraph, Prompt Evaluation, FastAPI, AI Safety]

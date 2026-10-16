@@ -1,7 +1,7 @@
 ---
 title: "Siting public e-bike docks in Sejong City: a travel-speed stress index, per-district K-Means with MCLP or OPTICS, and Seoul's Ttareungyi as a proxy ground truth"
 description: "Built a deceleration-based road stress index from travel speeds on 24 roads to justify public e-bikes, then selected dock locations per administrative district with K-Means followed by MCLP or OPTICS depending on coverage. With no ground truth for siting, the method was checked against Seoul's Ttareungyi stations using the share of cluster centres within 200 m of a station."
-date: 2026-10-16
+date: 2026-03-03
 lang: en
 key: sejong-siting
 tags: [Facility Location, K-Means, MCLP, OPTICS, Geospatial Analysis, Public Data]

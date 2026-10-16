@@ -1,7 +1,7 @@
 ---
 title: "마음일기: 골든셋 기반 감정 분류 프롬프트 개선과 pgvector·지식 그래프 기억을 쓰는 대화 에이전트"
 description: "AI 일기 앱 「마음일기」의 감정 분석, RAG 장기기억 대화, 위기 감지 레이어를 정리한 기술 리포트. 394건 골든셋 기준으로 감정 분류 정확도를 53.8%에서 71.6%, Macro F1을 0.483에서 0.700으로 올렸다."
-date: 2026-10-16
+date: 2026-08-04
 lang: ko
 key: maeum-diary
 tags: [LLM, RAG, pgvector, LangGraph, Prompt Evaluation, FastAPI, AI Safety]

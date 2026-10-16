@@ -1,7 +1,7 @@
 ---
 title: "원가율 예측 시뮬레이터: 사용한 기술 스택과 구성"
 description: "이전 회사에서 만든 견적 전 원가율 시뮬레이터의 기술 구성을 정리했다. 회사 데이터와 내부 수치는 다루지 않는다."
-date: 2026-10-16
+date: 2026-04-07
 lang: ko
 key: cost-simulator
 tags: [RandomForest, 회귀, 피처 엔지니어링, FastAPI, Azure, LLM]

@@ -1,7 +1,7 @@
 ---
 title: "BARAM 2026 풍력발전량 예측: MOS 풍속 보정, FICR 인식 손실, BiGRU seq2seq 그룹별 블렌드"
 description: "기상예보(LDAPS·GFS)만으로 가덕산 풍력단지 3개 그룹의 2025년 시간별 발전량을 예측했다. 대회 산식 채점 하네스, SCADA 기반 MOS 풍속 보정, 정산금 문턱을 넣은 손실, BiGRU seq2seq 중심의 그룹별 블렌드로 구성했다."
-date: 2026-10-16
+date: 2026-07-14
 lang: ko
 key: baram-wind
 tags: [풍력발전량 예측, NWP, MOS, BiGRU, FICR, 시계열, 앙상블]

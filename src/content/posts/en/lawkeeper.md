@@ -1,7 +1,7 @@
 ---
 title: "LawKeeper: Multi-turn Legal Consultation RAG with a Fixed Case Context and Query Rewriting for Follow-up Retrieval"
 description: "A legal consultation RAG chatbot that splits statutes, precedents, terms-of-service clauses and consultation Q&A into five ChromaDB collections, and retrieves for follow-up questions with a rewritten query built from a fixed case summary plus the current question."
-date: 2026-10-16
+date: 2026-03-24
 lang: en
 key: lawkeeper
 tags: [RAG, Multi-turn RAG, Query Rewriting, ChromaDB, Ko-SBERT, GPT-4o-mini, Legal AI]

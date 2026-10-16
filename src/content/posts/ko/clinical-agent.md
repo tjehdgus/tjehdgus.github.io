@@ -1,7 +1,7 @@
 ---
 title: "임상시험 중단 위험 예측 에이전트: LangGraph 병렬 서브에이전트, 이중 모델 what-if 재예측, 데이터 대조 검증 루프"
 description: "임상 설계 정보와 계획서 초안으로 중단확률을 예측하고, 수정안을 두 모델로 재예측해 판정하며, 식약처·ICH 원문 RAG로 계획서를 검토하는 LangGraph 멀티에이전트를 정리했다. 리포트의 인용 근거는 LLM이 아닌 데이터 대조로 검증한다."
-date: 2026-10-16
+date: 2026-08-11
 lang: ko
 key: clinical-agent
 tags: [LangGraph, Multi-Agent, XGBoost, RAG, Clinical Trials, Hallucination Detection]

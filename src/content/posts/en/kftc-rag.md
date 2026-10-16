@@ -1,7 +1,7 @@
 ---
 title: "RAG over Korea Fair Trade Commission Decisions: Hybrid Retrieval, Dual-Reranker RRF, and EXAONE 3.5 LoRA Generation"
 description: "A RAG system that returns five evidence chunks and an answer over 500 KFTC decisions (31,877 chunks), built under a local-LLM-only (≤8B), no-rechunking, 30-second rule. On a 278-question internal set: R@5 0.6930, MRR 0.8007, total score 67.76."
-date: 2026-10-16
+date: 2026-05-12
 lang: en
 key: kftc-rag
 tags: [RAG, Hybrid Retrieval, Reranker, RRF, Contextual Chunking, EXAONE, LoRA]

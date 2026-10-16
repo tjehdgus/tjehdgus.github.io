@@ -1,7 +1,7 @@
 ---
 title: "SPI6 가뭄 단계 분류: 기상·댐 일자료 결합, Oracle에서 R 랜덤포레스트로, R Shiny 확률 대시보드"
 description: "기상청 ASOS·SPI6와 K-water 댐 일자료를 지점·일자 단위로 결합해 SPI6 기반 6단계 가뭄 등급을 분류하는 랜덤포레스트를 만들고, 단계별 확률을 보여주는 R Shiny 대시보드를 붙였다. 2024 K-water 대국민 물 빅데이터 공모전 장려상."
-date: 2026-10-16
+date: 2026-03-10
 lang: ko
 key: kwater-drought
 tags: [Random Forest, SPI6, Drought Classification, Oracle Data Mining, R Shiny, Imbalanced Classification]

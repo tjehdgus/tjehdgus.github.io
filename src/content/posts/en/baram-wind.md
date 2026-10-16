@@ -1,7 +1,7 @@
 ---
 title: "BARAM 2026 Wind Power Forecasting: MOS Wind Correction, a FICR-Aware Loss, and Per-Group Blending around a BiGRU seq2seq"
 description: "Hourly 2025 generation for three groups of the Gadeoksan wind farm was forecast from NWP (LDAPS, GFS) alone. The pipeline combines a metric-exact scoring harness, SCADA-based MOS wind correction, a loss that encodes the settlement thresholds, and a per-group blend centered on a BiGRU seq2seq."
-date: 2026-10-16
+date: 2026-07-14
 lang: en
 key: baram-wind
 tags: [Wind Power Forecasting, NWP, MOS, BiGRU, FICR, Time Series, Ensemble]

@@ -1,7 +1,7 @@
 ---
 title: "Classifying 396 Car Models: Noise Filtering, ConvNeXt V2 with EMA/SWA, and Temperature Scaling for LogLoss"
 description: "A pipeline for classifying car images into 396 models in the Dacon HAI! Hecto AI Challenge. Test-distribution-aware noise filtering, a five-backbone comparison, ConvNeXt V2 base trained with EMA, SWA and curriculum learning, and temperature scaling, TTA and soft voting at inference reached a private LogLoss of 0.12452."
-date: 2026-10-16
+date: 2026-03-31
 lang: en
 key: car-classification
 tags: [Image Classification, Fine-grained, ConvNeXt V2, EMA, SWA, Temperature Scaling, Dacon]

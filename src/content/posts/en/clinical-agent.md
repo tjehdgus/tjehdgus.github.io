@@ -1,7 +1,7 @@
 ---
 title: "Clinical Trial Termination Risk Agent: Parallel LangGraph Sub-agents, Dual-Model What-if Re-prediction, and a Data-grounded Verification Loop"
 description: "A LangGraph multi-agent system that predicts the termination probability of a trial design, re-predicts proposed revisions with two models before judging them, and reviews protocol drafts against MFDS and ICH guideline text via RAG. Citations in the generated report are verified against data rather than by another LLM."
-date: 2026-10-16
+date: 2026-08-11
 lang: en
 key: clinical-agent
 tags: [LangGraph, Multi-Agent, XGBoost, RAG, Clinical Trials, Hallucination Detection]

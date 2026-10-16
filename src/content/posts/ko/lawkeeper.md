@@ -1,7 +1,7 @@
 ---
 title: "LawKeeper: 법률 상담 멀티턴 RAG, 고정 사건 맥락과 질의 재작성으로 후속 질문 검색"
 description: "판례·법령·약관·상담 Q&A를 5개 ChromaDB 컬렉션에 나눠 적재하고, 후속 질문을 '고정된 사건 요약 + 현재 질문'을 재작성한 쿼리로 검색하도록 설계한 법률 상담 RAG 챗봇의 파이프라인과 버전별 비교를 정리했다."
-date: 2026-10-16
+date: 2026-03-24
 lang: ko
 key: lawkeeper
 tags: [RAG, Multi-turn RAG, Query Rewriting, ChromaDB, Ko-SBERT, GPT-4o-mini, Legal AI]

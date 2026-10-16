@@ -1,7 +1,7 @@
 ---
 title: "라이프로그 센서 기반 수면 7지표 예측: 9소스 타겟별 블렌드와 forward-chaining 재가중"
 description: "폰·워치 센서 하루치로 그날 밤 수면 7개 이진 지표를 예측했다. 9개 이질 소스를 타겟별로 블렌드하고 S1/S4 가중치를 시간순 폴드로 다시 골라 Private Log-Loss 0.57849(22위)를 기록했다."
-date: 2026-10-16
+date: 2026-07-02
 lang: ko
 key: etri-sleep
 tags: [Lifelog, Sleep Prediction, Ensemble, Time-series CV, Distribution Shift, SigLIP]

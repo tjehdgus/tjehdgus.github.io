@@ -1,7 +1,7 @@
 ---
 title: "제품 문의 RAG 챗봇: 사용한 기술 스택과 구성"
 description: "이전 회사에서 만든 고객 제품 문의 RAG 챗봇의 기술 구성을 정리했다. 회사 데이터와 내부 수치는 다루지 않는다."
-date: 2026-10-16
+date: 2026-04-14
 lang: ko
 key: product-rag-chatbot
 tags: [RAG, ChromaDB, bge-m3, PII 마스킹, FastAPI, WebSocket]

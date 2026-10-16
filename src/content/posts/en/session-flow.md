@@ -1,7 +1,7 @@
 ---
 title: "Session Flow: Hook-Based Recording of Multi-Session Claude Code Work, Name-Based Harness, and Snapshot Diffs"
 description: "Design document for a serverless tool that records message flow and file edits across Claude Code sessions into local JSONL via hooks and renders them as a graph and diffs in a VS Code extension. Covers the harness briefing and enforcement logic and the test setup."
-date: 2026-10-16
+date: 2026-10-09
 lang: en
 key: session-flow
 tags: [Claude Code, hooks, VS Code Extension, Multi-agent, Observability, Diff]

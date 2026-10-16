@@ -1,7 +1,7 @@
 ---
 title: "Product inquiry RAG chatbot: tech stack and components"
 description: "The technical makeup of a customer product-inquiry RAG chatbot built at a previous company. Company data and internal figures are not covered."
-date: 2026-10-16
+date: 2026-04-14
 lang: en
 key: product-rag-chatbot
 tags: [RAG, ChromaDB, bge-m3, PII Masking, FastAPI, WebSocket]

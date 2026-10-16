@@ -1,7 +1,7 @@
 ---
 title: "Hourly Power Forecasting for 100 Buildings: Domain Features and Per-Building GBDT Model Selection"
 description: "For the Dacon 2025 Power Consumption Forecasting AI Competition, I built CDH, THI and per-building holiday features with pattern-matched spline imputation, then picked the best of XGBoost, LightGBM and CatBoost for each building by validation SMAPE, reaching a public LB SMAPE of 5.22."
-date: 2026-10-16
+date: 2026-03-17
 lang: en
 key: power-forecasting
 tags: [Time Series, Energy Forecasting, Feature Engineering, XGBoost, LightGBM, CatBoost, Dacon]

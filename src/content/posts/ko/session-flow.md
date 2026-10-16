@@ -1,7 +1,7 @@
 ---
 title: "Session Flow: hook 기반 Claude Code 멀티 세션 기록, 이름 기반 하네스, 스냅샷 diff 설계"
 description: "여러 Claude Code 세션의 메시지 흐름과 파일 수정을 hook으로 로컬 JSONL에 기록하고 VS Code 확장에서 그래프와 diff로 보여주는 서버 없는 도구의 설계 문서. 하네스 안내·차단 로직과 검증 구성을 정리했다."
-date: 2026-10-16
+date: 2026-10-09
 lang: ko
 key: session-flow
 tags: [Claude Code, hooks, VS Code Extension, Multi-agent, Observability, Diff]

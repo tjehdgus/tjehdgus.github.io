@@ -1,7 +1,7 @@
 ---
 title: "공정위 의결서 RAG: 하이브리드 검색·이중 리랭커 RRF와 EXAONE 3.5 LoRA 생성"
 description: "의결서 500건(31,877청크)에서 근거 청크 5개와 답변을 돌려주는 RAG를 8B 이하 로컬 LLM·재청킹 금지·30초 제한 아래 구성했다. 자체 평가셋 278문항 기준 R@5 0.6930, MRR 0.8007, 종합 67.76점."
-date: 2026-10-16
+date: 2026-05-12
 lang: ko
 key: kftc-rag
 tags: [RAG, Hybrid Retrieval, Reranker, RRF, Contextual Chunking, EXAONE, LoRA]

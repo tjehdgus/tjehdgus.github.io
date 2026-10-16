@@ -1,7 +1,7 @@
 ---
 title: "세종시 공공 전기자전거 거치대 입지 선정: 통행속도 스트레스 지수, 동별 K-Means·MCLP·OPTICS, 따릉이 대용 검증"
 description: "도로 24개 구간통행속도로 도로 스트레스 지수를 만들어 전기자전거 도입 근거를 세우고, 행정동별 K-Means 후 커버리지 기준으로 MCLP와 OPTICS를 나눠 적용해 거치대 입지를 선정했다. 정답이 없는 입지 문제는 서울 따릉이 대여소를 정답 대용으로 삼아 군집 중심 200m 근접 비율로 검증했다."
-date: 2026-10-16
+date: 2026-03-03
 lang: ko
 key: sejong-siting
 tags: [입지 선정, K-Means, MCLP, OPTICS, 공간 분석, 공공데이터]

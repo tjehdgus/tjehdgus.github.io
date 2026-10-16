@@ -1,7 +1,7 @@
 ---
 title: "Predicting seven sleep indicators from lifelog sensors: per-target blending of nine sources with forward-chaining reweighting"
 description: "One day of phone and watch sensor data was used to predict seven binary sleep indicators for the following night. Nine heterogeneous sources were blended per target, and the S1/S4 weights were re-selected on time-ordered folds, giving a private Log-Loss of 0.57849 (22nd place)."
-date: 2026-10-16
+date: 2026-07-02
 lang: en
 key: etri-sleep
 tags: [Lifelog, Sleep Prediction, Ensemble, Time-series CV, Distribution Shift, SigLIP]

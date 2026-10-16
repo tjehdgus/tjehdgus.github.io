@@ -1,7 +1,7 @@
 ---
 title: "Cost-ratio simulator: tech stack and components"
 description: "The technical makeup of a pre-quote cost-ratio simulator built at a previous company. Company data and internal figures are not covered."
-date: 2026-10-16
+date: 2026-04-07
 lang: en
 key: cost-simulator
 tags: [RandomForest, Regression, Feature Engineering, FastAPI, Azure, LLM]

@@ -1,7 +1,7 @@
 ---
 title: "396종 차량 이미지 분류: 노이즈 정제, ConvNeXt V2 + EMA·SWA, Temperature Scaling으로 LogLoss 줄이기"
 description: "데이콘 HAI! Hecto AI Challenge에서 차량 이미지를 396개 차종으로 분류한 파이프라인을 정리했다. 평가 분포 기준의 노이즈 정제, 백본 5종 비교, ConvNeXt V2 base 위의 EMA·SWA·Curriculum 학습, Temperature Scaling·TTA·soft voting 추론으로 Private LogLoss 0.12452를 기록했다."
-date: 2026-10-16
+date: 2026-03-31
 lang: ko
 key: car-classification
 tags: [Image Classification, Fine-grained, ConvNeXt V2, EMA, SWA, Temperature Scaling, Dacon]

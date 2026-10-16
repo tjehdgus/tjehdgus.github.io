@@ -1,7 +1,7 @@
 ---
 title: "SPI6 Drought-Stage Classification: Joining Weather and Dam Daily Data, Moving from Oracle to R Random Forest, and an R Shiny Probability Dashboard"
 description: "Joined KMA ASOS/SPI6 data with K-water daily dam records at the station-day level, trained a random forest that classifies six SPI6-based drought stages, and served per-stage probabilities through an R Shiny dashboard. Honorable mention, 2024 K-water Public Water Big Data Contest."
-date: 2026-10-16
+date: 2026-03-10
 lang: en
 key: kwater-drought
 tags: [Random Forest, SPI6, Drought Classification, Oracle Data Mining, R Shiny, Imbalanced Classification]
