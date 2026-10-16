@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { ui, TISTORY, type Lang } from '../data/site';
+import { postsFor } from '../data/posts';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const posts = await postsFor(lang);
+---
+<Base lang={lang} section="posts" title={t.nav.posts} alt={lang === 'ko' ? '/en/posts/' : '/posts/'}>
+  <div class="wrap narrow">
+    <header class="page-head"><h1>{t.nav.posts}</h1><p>{t.postsIntro}</p></header>
+    <PostList posts={posts} lang={lang} />
+    <p class="note">{t.blogNote} <a href={TISTORY} target="_blank" rel="noopener">mynews76154.tistory.com ↗</a></p>
+  </div>
+</Base>

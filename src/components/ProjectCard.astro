@@ -1,0 +1,19 @@
+---
+import { ui, type Lang, type Project } from '../data/site';
+interface Props { p: Project; lang: Lang }
+const { p, lang } = Astro.props;
+const t = ui[lang];
+const base = lang === 'ko' ? '' : '/en';
+---
+<article class="card">
+  <div class="card-top"><span>{t.groups[p.group]}</span>{p.period && <span>{p.period}</span>}</div>
+  <h3>{p.title[lang]}</h3>
+  <p>{p.summary[lang]}</p>
+  <div class="result"><b>{t.result}</b>{p.result[lang]}</div>
+  <div class="tags">{p.stack.map((s) => <span class="tag">{s}</span>)}</div>
+  <div class="links">
+    {p.postKey && <a href={`${base}/posts/${p.postKey}/`}>{lang === 'ko' ? '정리 글' : 'Write-up'}</a>}
+    {p.posts[0] && <a href={p.posts[0]} target="_blank" rel="noopener">{t.readOn} ↗</a>}
+    {p.repo && <a href={p.repo} target="_blank" rel="noopener">{t.code} ↗</a>}
+  </div>
+</article>

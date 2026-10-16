@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import PostList from '../components/PostList.astro';
+import { ui, projects, TISTORY, type Lang } from '../data/site';
+import { postsFor } from '../data/posts';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const base = lang === 'ko' ? '' : '/en';
+const featured = projects.filter((p) => p.featured);
+const posts = (await postsFor(lang)).slice(0, 5);
+---
+<Base lang={lang} section="home" alt={lang === 'ko' ? '/en/' : '/'}>
+  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">{t.heroKicker}</span>
+      <h1>{t.heroTitle[0]}<br />{t.heroTitle[1]}</h1>
+      <p>{t.heroDesc}</p>
+      <div class="cta">
+        <a class="btn primary" href={`${base}/projects/`}>{t.ctaProjects}</a>
+        <a class="btn" href={TISTORY} target="_blank" rel="noopener">{t.ctaBlog} ↗</a>
+      </div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><h2>{t.featured}</h2><a href={`${base}/projects/`}>{t.allProjects} →</a></div>
+      <div class="grid">{featured.map((p) => <ProjectCard p={p} lang={lang} />)}</div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><h2>{t.recent}</h2><a href={`${base}/posts/`}>{t.allPosts} →</a></div>
+      <PostList posts={posts} lang={lang} />
+      <p class="note">{t.blogNote} <a href={TISTORY} target="_blank" rel="noopener">mynews76154.tistory.com ↗</a></p>
+    </div>
+  </section>
+</Base>

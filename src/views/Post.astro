@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import { render, type CollectionEntry } from 'astro:content';
+import { ui, type Lang } from '../data/site';
+interface Props { post: CollectionEntry<'posts'>; hasOther: boolean }
+const { post, hasOther } = Astro.props;
+const lang = post.data.lang as Lang;
+const t = ui[lang];
+const { Content } = await render(post);
+const fmt = (d: Date) => d.toISOString().slice(0, 10).replaceAll('-', '.');
+const other = lang === 'ko' ? `/en/posts/${post.data.key}/` : `/posts/${post.data.key}/`;
+const alt = hasOther ? other : lang === 'ko' ? '/en/posts/' : '/posts/';
+---
+<Base lang={lang} section="posts" title={post.data.title} description={post.data.description} alt={alt}>
+  <article class="wrap narrow">
+    <header class="post-head">
+      <div class="tags">{post.data.tags.map((x) => <span class="tag">{x}</span>)}</div>
+      <h1>{post.data.title}</h1>
+      <div class="post-meta">
+        <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
+        {post.data.updated && <span>{t.updated} {fmt(post.data.updated)}</span>}
+        {hasOther && <a href={other}>{t.translated} →</a>}
+      </div>
+    </header>
+    <div class="prose"><Content /></div>
+    <footer class="post-foot">
+      {post.data.tistory && <a href={post.data.tistory} target="_blank" rel="noopener">{t.originalOn} ↗</a>}
+      {hasOther && <a href={other}>{t.translated} →</a>}
+    </footer>
+  </article>
+</Base>

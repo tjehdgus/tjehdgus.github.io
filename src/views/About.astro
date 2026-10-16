@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import { ui, GITHUB, TISTORY, type Lang } from '../data/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const base = lang === 'ko' ? '' : '/en';
+const stack = {
+  'LLM · RAG': ['LangChain', 'LangGraph', 'ChromaDB', 'FAISS', 'pgvector', 'BGE-m3', 'Reranker', 'LoRA'],
+  'ML / DL': ['XGBoost', 'LightGBM', 'CatBoost', 'PyTorch', 'ConvNeXt V2', 'BiLSTM / BiGRU'],
+  'Service': ['FastAPI', 'React', 'Supabase', 'Azure', 'Cloud Run', 'Claude Code'],
+};
+---
+<Base lang={lang} section="about" title={t.nav.about} alt={lang === 'ko' ? '/en/about/' : '/about/'}>
+  <div class="wrap">
+    <header class="page-head"><h1>{t.nav.about}</h1></header>
+    <div class="about-grid">
+      <div class="prose">
+        {lang === 'ko' ? (
+          <>
+            <p>RAG와 에이전트 시스템을 만드는 AI 엔지니어 서동현입니다. ML 대회와 공모전에서 쌓은 검증 습관을 LLM 서비스에 그대로 가져오려고 합니다.</p>
+            <h2>하는 일</h2>
+            <ul>
+              <li><strong>RAG · 에이전트</strong>: 검색 파이프라인 설계(하이브리드 검색, 리랭커, 청킹), 로컬 LLM LoRA, LangGraph 멀티에이전트, 근거 검증 노드.</li>
+              <li><strong>AI 서비스</strong>: 기획부터 배포까지 혼자 만드는 서비스. 기능을 줄이는 결정과 골든셋 기반 프롬프트 개선을 중요하게 봅니다.</li>
+              <li><strong>ML 모델링</strong>: 정형·시계열·이미지 대회에서 검증 설계, 확률 보정, 블렌딩.</li>
+            </ul>
+            <h2>일하는 방식</h2>
+            <ul>
+              <li><strong>검증부터 만듭니다.</strong> 평가 산식 그대로 채점하는 하네스와 테스트 구조를 흉내 낸 CV를 먼저 둡니다.</li>
+              <li><strong>누수 경계를 먼저 긋습니다.</strong> 평가셋이 학습에 섞여 오른 점수는 스스로 버렸습니다.</li>
+              <li><strong>실패한 시도와 숫자를 남깁니다.</strong> 무엇이 안 됐는지가 다음 결정을 더 빠르게 만듭니다.</li>
+              <li><strong>제약을 설계 입력으로 봅니다.</strong> 시간 제한, 모델 크기 제한, 운영 인원이 구조를 정합니다.</li>
+            </ul>
+            <h2>경력</h2>
+            <ul>
+              <li>제조 기업 AI 엔지니어: 제품 문의 RAG 챗봇, 원가율 예측 시뮬레이터 개발</li>
+              <li>대규모 의료 AI 데이터 구축 사업 PM</li>
+              <li>프로세스 마이닝 컨설팅</li>
+            </ul>
+            <p>자세한 프로젝트는 <a href={`${base}/projects/`}>프로젝트</a>에, 개발 과정과 대회 회고는 <a href={TISTORY}>티스토리 블로그</a>에 있습니다.</p>
+          </>
+        ) : (
+          <>
+            <p>I'm Donghyun Seo, an AI engineer building RAG and agent systems. I try to bring the validation habits I picked up in ML competitions into LLM products.</p>
+            <h2>What I do</h2>
+            <ul>
+              <li><strong>RAG and agents</strong>: retrieval pipeline design (hybrid search, rerankers, chunking), LoRA on local LLMs, LangGraph multi-agent systems, evidence-verification nodes.</li>
+              <li><strong>AI services</strong>: products I build end to end on my own, where cutting features and improving prompts against a golden set matter most.</li>
+              <li><strong>ML modelling</strong>: validation design, probability calibration and blending in tabular, time-series and vision competitions.</li>
+            </ul>
+            <h2>How I work</h2>
+            <ul>
+              <li><strong>Validation first.</strong> A harness that scores with the exact metric, and CV that mimics the test split, come before models.</li>
+              <li><strong>Draw the leakage line early.</strong> I have thrown away my own best score when the eval set had leaked into training.</li>
+              <li><strong>Keep the failures and their numbers.</strong> Knowing what did not work makes the next decision faster.</li>
+              <li><strong>Treat constraints as design input.</strong> Time limits, model-size limits and team size shape the architecture.</li>
+            </ul>
+            <h2>Experience</h2>
+            <ul>
+              <li>AI engineer at a manufacturer: product-inquiry RAG chatbot, cost-ratio prediction simulator</li>
+              <li>Project manager for a large-scale medical AI dataset programme</li>
+              <li>Process mining consulting</li>
+            </ul>
+            <p>See <a href={`${base}/projects/`}>Projects</a> for details. Build logs and competition retrospectives are on my <a href={TISTORY}>Korean blog</a>.</p>
+          </>
+        )}
+      </div>
+      <aside>
+        <div class="side-box">
+          {Object.entries(stack).map(([k, v]) => (
+            <>
+              <h4>{k}</h4>
+              <div class="tags" style="margin-bottom:18px">{v.map((s) => <span class="tag">{s}</span>)}</div>
+            </>
+          ))}
+          <h4>Links</h4>
+          <ul>
+            <li><a href={GITHUB} target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a href={TISTORY} target="_blank" rel="noopener">Tistory ↗</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

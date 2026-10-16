@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../data/site';
+interface Props { posts: CollectionEntry<'posts'>[]; lang: Lang }
+const { posts, lang } = Astro.props;
+const base = lang === 'ko' ? '' : '/en';
+const fmt = (d: Date) => d.toISOString().slice(0, 10).replaceAll('-', '.');
+---
+<div class="post-list">
+  {posts.map((p) => (
+    <article class="post-item">
+      <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+      <div>
+        <h3><a href={`${base}/posts/${p.data.key}/`}>{p.data.title}</a></h3>
+        <p>{p.data.description}</p>
+      </div>
+    </article>
+  ))}
+</div>
