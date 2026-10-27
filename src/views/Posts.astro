@@ -3,14 +3,17 @@ import Base from '../layouts/Base.astro';
 import PostList from '../components/PostList.astro';
 import { ui, TISTORY, type Lang } from '../data/site';
 import { postsFor } from '../data/posts';
-interface Props { lang: Lang }
-const { lang } = Astro.props;
+interface Props { lang: Lang; kind?: 'report' | 'review' }
+const { lang, kind = 'report' } = Astro.props;
 const t = ui[lang];
-const posts = await postsFor(lang);
+const posts = await postsFor(lang, kind);
+const seg = kind === 'review' ? 'reviews' : 'posts';
+const title = kind === 'review' ? t.nav.reviews : t.nav.posts;
+const intro = kind === 'review' ? t.reviewsIntro : t.postsIntro;
 ---
-<Base lang={lang} section="posts" title={t.nav.posts} alt={lang === 'ko' ? '/posts/' : '/ko/posts/'}>
+<Base lang={lang} section={seg} title={title} alt={lang === 'ko' ? `/${seg}/` : `/ko/${seg}/`}>
   <div class="wrap narrow">
-    <header class="page-head"><h1>{t.nav.posts}</h1><p>{t.postsIntro}</p></header>
+    <header class="page-head"><h1>{title}</h1><p>{intro}</p></header>
     <PostList posts={posts} lang={lang} />
     <p class="note">{t.blogNote} <a href={TISTORY} target="_blank" rel="noopener">mynews76154.tistory.com ↗</a></p>
   </div>

@@ -11,7 +11,7 @@ const fmt = (d: Date) => d.toISOString().slice(0, 10).replaceAll('-', '.');
 const other = lang === 'ko' ? `/posts/${post.data.key}/` : `/ko/posts/${post.data.key}/`;
 const alt = hasOther ? other : lang === 'ko' ? '/posts/' : '/ko/posts/';
 ---
-<Base lang={lang} section="posts" title={post.data.title} description={post.data.description} alt={alt}>
+<Base lang={lang} section={post.data.kind === 'review' ? 'reviews' : 'posts'} title={post.data.title} description={post.data.description} alt={alt}>
   <article class="wrap narrow">
     <header class="post-head">
       <div class="tags">{post.data.tags.map((x) => <span class="tag">{x}</span>)}</div>
@@ -24,7 +24,7 @@ const alt = hasOther ? other : lang === 'ko' ? '/posts/' : '/ko/posts/';
     </header>
     <div class="prose"><Content /></div>
     <footer class="post-foot">
-      {post.data.tistory && <a href={post.data.tistory} target="_blank" rel="noopener">{t.originalOn} ↗</a>}
+      {post.data.tistory && <a href={post.data.tistory} target="_blank" rel="noopener">{post.data.kind === 'review' ? t.reviewOn : t.originalOn} ↗</a>}
       {hasOther && <a href={other}>{t.translated} →</a>}
     </footer>
   </article>

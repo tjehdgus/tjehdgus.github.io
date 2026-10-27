@@ -6,7 +6,7 @@ interface Props {
   lang: Lang;
   title?: string;
   description?: string;
-  section?: 'home' | 'about' | 'projects' | 'posts';
+  section?: 'home' | 'about' | 'projects' | 'posts' | 'reviews';
   alt: string; // URL of the same page in the other language
 }
 const { lang, title, description, section = 'home', alt } = Astro.props;
@@ -19,6 +19,7 @@ const links = [
   { key: 'about', href: `${base}/about/`, label: t.nav.about },
   { key: 'projects', href: `${base}/projects/`, label: t.nav.projects },
   { key: 'posts', href: `${base}/posts/`, label: t.nav.posts },
+  { key: 'reviews', href: `${base}/reviews/`, label: t.nav.reviews },
 ] as const;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const altLang = lang === 'ko' ? 'en' : 'ko';

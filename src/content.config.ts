@@ -13,6 +13,7 @@ const posts = defineCollection({
     tags: z.array(z.string()).default([]),
     tistory: z.string().url().optional(),
     draft: z.boolean().default(false),
+    kind: z.enum(['report', 'review']).default('report'),
   }),
 });
 

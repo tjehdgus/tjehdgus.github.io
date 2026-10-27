@@ -3,8 +3,8 @@ import { projects, type Lang } from './site';
 
 const order = projects.map((p) => p.postKey);
 
-export async function postsFor(lang: Lang) {
-  const all = await getCollection('posts', (p) => p.data.lang === lang && !p.data.draft);
+export async function postsFor(lang: Lang, kind: 'report' | 'review' = 'report') {
+  const all = await getCollection('posts', (p) => p.data.lang === lang && !p.data.draft && p.data.kind === kind);
   const rank = (k: string) => {
     const i = order.indexOf(k);
     return i === -1 ? 999 : i;

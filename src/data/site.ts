@@ -8,7 +8,7 @@ export const ui = {
   ko: {
     name: '서동현',
     role: 'AI 엔지니어',
-    nav: { home: '홈', about: '소개', projects: '프로젝트', posts: '리포트' },
+    nav: { home: '홈', about: '소개', projects: '프로젝트', posts: '리포트', reviews: '리뷰' },
     heroKicker: 'AI Engineer · Agents · RAG · LLM in production',
     heroTitle: ['모델을 고르는 이유와', '검증하는 방법을 기록합니다'],
     heroDesc:
@@ -26,6 +26,8 @@ export const ui = {
     blogNote: '대회 회고와 트렌드 리뷰, 개발 과정 기록은 티스토리 블로그에 더 자주 올립니다.',
     postsIntro: '프로젝트별 기술 리포트입니다. 문제 정의, 데이터, 파이프라인, 실험 결과를 코드 기준으로 정리했고, 모든 글이 영어로도 있습니다.',
     projectsIntro: 'RAG·에이전트, AI 서비스, ML 대회, 실무 프로젝트를 정리했습니다.',
+    reviewsIntro: '새로 나온 AI 도구, 모델, 논문을 자료와 사례를 근거로 정리한 리뷰입니다.',
+    reviewOn: '티스토리에서 보기',
     translated: '이 글의 영어판',
     originalOn: '개발 과정 기록 (티스토리)',
     updated: '수정',
@@ -36,7 +38,7 @@ export const ui = {
   en: {
     name: 'Donghyun Seo',
     role: 'AI Engineer',
-    nav: { home: 'Home', about: 'About', projects: 'Projects', posts: 'Reports' },
+    nav: { home: 'Home', about: 'About', projects: 'Projects', posts: 'Reports', reviews: 'Reviews' },
     heroKicker: 'AI Engineer · Agents · RAG · LLM in production',
     heroTitle: ['Notes on why a model was chosen', 'and how it was validated'],
     heroDesc:
@@ -54,6 +56,8 @@ export const ui = {
     blogNote: 'Competition retrospectives, trend reviews and build logs are posted more often on my Korean blog.',
     postsIntro: 'Technical reports for each project: problem, data, pipeline and experiments, written from the code. Every report also exists in Korean.',
     projectsIntro: 'RAG and agents, AI services, ML competitions and work projects.',
+    reviewsIntro: 'Reviews of new AI tools, models and papers, based on sources and published case studies.',
+    reviewOn: 'Korean version on Tistory',
     translated: 'Korean version',
     originalOn: 'Build log on my Korean blog',
     updated: 'Updated',
